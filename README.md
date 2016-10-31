@@ -1,2 +1,2 @@
 # OTPGenerator
-An one-time password generator.
+One-time password generator.
