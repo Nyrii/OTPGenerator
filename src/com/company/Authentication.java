@@ -1,19 +1,11 @@
 package com.company;
 
-import org.apache.commons.codec.binary.Base32;
 import org.apache.commons.codec.binary.Hex;
-import org.apache.commons.codec.digest.HmacUtils;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import javax.swing.text.Utilities;
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
-import static java.lang.Math.floor;
 
 /**
  * Created by noboud_n on 31/10/2016.
@@ -24,23 +16,17 @@ public class Authentication {
     Authentication() {};
 
 	private String truncateHash(byte[] hash) {
-		int offset = hash[hash.length - 1] & 0xF;
+		String hashString = new String(hash);
+		int offset = Integer.parseInt(hashString.substring(hashString.length() - 1, hashString.length()), 16);
 
-		long truncatedHash = 0;
-		for (int i = 0; i < 4; ++i) {
-			truncatedHash <<= 8;
-			truncatedHash |= (hash[offset + i] & 0xFF);
-		}
+		String truncatedHash = hashString.substring(offset * 2, offset * 2 + 8);
 
-		truncatedHash &= 0x7FFFFFFF;
-		truncatedHash %= 1000000;
+		int val = Integer.parseUnsignedInt(truncatedHash, 16) & 0x7FFFFFFF;
 
-		int code = (int) truncatedHash;
-		String result = Integer.toString(code);
-		for (int i = result.length(); i < 6; i++) {
-			result = "0" + result;
-		}
-		return result;
+		String finalHash = String.valueOf(val);
+		finalHash = finalHash.substring(finalHash.length() - 6, finalHash.length());
+
+		return finalHash;
 	}
 
 	private byte[] hmacSha1(byte[] value, byte[] keyBytes) {
@@ -59,28 +45,26 @@ public class Authentication {
 	}
 
 	public String GoogleAuthenticatorCode(String secret) throws Exception {
-        Base32 base = new Base32();
-        byte[] key = base.decode(secret);
-
 		long value = new Date().getTime() / TimeUnit.SECONDS.toMillis(30);
+
+		base32 base = new base32(base32.Alphabet.BASE32, false, true);
+		byte[] key = base.fromString(secret);
 
 		byte[] data = new byte[8];
 		for (int i = 8; i-- > 0; value >>>= 8) {
 			data[i] = (byte) value;
 		}
 
-		System.out.println("Time remaining : " + new Date().getTime() / 1000 % 30);
-
 		byte[] hash = hmacSha1(data, key);
-        return truncateHash(hash);
-    }
 
+		return truncateHash(hash);
+	}
 
 	public static void main(String[] args) {
 		Authentication auth = new Authentication();
 
 		try {
-			System.out.println(auth.GoogleAuthenticatorCode("uhshrl33v7xrc6wxuclkvdtmqagk3fkp"));
+			System.out.println(auth.GoogleAuthenticatorCode("2xmzih2yhhgpvnqrnv2t5fnxuk4stps6"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
