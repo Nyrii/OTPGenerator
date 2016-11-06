@@ -10,16 +10,6 @@ angular.module('requirerisApp')
             var form = $("#form").serializeArray();
             $("#secretID").val('');
 
-
-            // $http.post("/api/" + $scope.module, {msg:"key=" + form[0].value})
-            // .success(function () {
-            //     console.log("msg sent");
-            // })
-            // .error(function () {
-            //     console.log("msg failed");
-            // });
-            // $("#otp").html(form[0].value);
-
             $ .ajax({
                 url: "/api/" + $scope.module + "?_csrf=" + getCSRF(),
                 type: "POST",

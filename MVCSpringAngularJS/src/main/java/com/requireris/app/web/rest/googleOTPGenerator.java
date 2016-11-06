@@ -17,7 +17,6 @@ public class googleOTPGenerator {
     public @ResponseBody String uploadFile(@RequestParam("key") String key,
                                             @PathVariable String moduleType) {
         String code = "mdr";
-//            return new ResponseEntity<>("Could not get the password.", HttpStatus.INTERNAL_SERVER_ERROR);
         return new String(code);
     }
 
