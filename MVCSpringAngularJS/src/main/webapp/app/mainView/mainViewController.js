@@ -4,7 +4,8 @@
 
 'use strict';
 angular.module('requirerisApp')
-    .controller('mainViewController', function () {
+    .controller('mainViewController', ["$scope", "LoginService", "Auth",
+        function ($scope, $loginService, $auth) {
 
         $(document).ready(function() {
             var active_tab_selector = $('.nav > li.active > a').attr('href');
@@ -51,5 +52,6 @@ angular.module('requirerisApp')
             $("#secretID").val('');
         });
 
+    }
 
-    });
+]);
