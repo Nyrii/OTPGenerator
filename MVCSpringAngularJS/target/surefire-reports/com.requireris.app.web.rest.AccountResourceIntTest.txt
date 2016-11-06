@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.requireris.app.web.rest.AccountResourceIntTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.498 sec - in com.requireris.app.web.rest.AccountResourceIntTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.549 sec - in com.requireris.app.web.rest.AccountResourceIntTest

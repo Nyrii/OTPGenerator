@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.requireris.app.security.SecurityUtilsUnitTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 sec - in com.requireris.app.security.SecurityUtilsUnitTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 sec - in com.requireris.app.security.SecurityUtilsUnitTest

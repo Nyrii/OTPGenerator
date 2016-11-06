@@ -14,11 +14,21 @@ import org.springframework.web.bind.annotation.*;
     @RequestMapping(value = &quot;/{moduleType}&quot;,
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody String uploadFile(@RequestParam(&quot;key&quot;) String key,
+    public @ResponseBody String generateGoogleOTP(@RequestParam(&quot;key&quot;) String key,
                                             @PathVariable String moduleType) {
+<span class="nc" id="L19">        String password = null;</span>
+<span class="nc" id="L20">        Authentication auth = new Authentication();</span>
 
-<span class="nc" id="L20">        String code = &quot;mdr&quot;;</span>
-<span class="nc" id="L21">        return new String(code);</span>
+        try {
+<span class="nc" id="L23">            password = auth.GoogleAuthenticatorCode(key);</span>
+<span class="nc" id="L24">        } catch (Exception e) {</span>
+<span class="nc" id="L25">            e.printStackTrace();</span>
+<span class="nc" id="L26">            return new String(&quot;Generation of password failed. Please verify your secret key.&quot;);</span>
+<span class="nc" id="L27">        }</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (password == null) {</span>
+<span class="nc" id="L29">            return new String(&quot;Generation of password failed : invalid password. Please try again later.&quot;);</span>
+        }
+<span class="nc" id="L31">        return new String(password);</span>
     }
 
 }
