@@ -1,0 +1,10 @@
+version: '2'
+services:
+    requireris-elasticsearch:
+        container_name: requireris-elasticsearch
+        image: elasticsearch:2.4.0
+        # volumes:
+        #     - ~/volumes/jhipster/Requireris/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300
