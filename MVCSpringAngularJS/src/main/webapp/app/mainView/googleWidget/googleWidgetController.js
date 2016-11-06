@@ -18,11 +18,10 @@ angular.module('requirerisApp')
                 },
                 dataType: "text",
                 success: function (data) {
-                    console.log(data);
-                    console.log("Password generated.");
+                    $('#otp').html(data);
                 },
                 error: function (data) {
-                    console.log(data);
+                    $('#otp').html(data);
                 }
             });
         });

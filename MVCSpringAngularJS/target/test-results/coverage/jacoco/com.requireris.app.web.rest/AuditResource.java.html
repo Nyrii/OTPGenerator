@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuditResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Requireris</a> &gt; <a href="index.source.html" class="el_package">com.requireris.app.web.rest</a> &gt; <span class="el_source">AuditResource.java</span></div><h1>AuditResource.java</h1><pre class="source lang-java linenums">package com.requireris.app.web.rest;
+
+import com.requireris.app.service.AuditEventService;
+
+import java.time.LocalDate;
+import com.requireris.app.web.rest.util.PaginationUtil;
+import org.springframework.boot.actuate.audit.AuditEvent;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+
+import java.net.URISyntaxException;
+import javax.inject.Inject;
+import java.util.List;
+
+/**
+ * REST controller for getting the audit events.
+ */
+@RestController
+@RequestMapping(value = &quot;/management/jhipster/audits&quot;, produces = MediaType.APPLICATION_JSON_VALUE)
+public class AuditResource {
+
+    private AuditEventService auditEventService;
+
+    @Inject
+<span class="fc" id="L31">    public AuditResource(AuditEventService auditEventService) {</span>
+<span class="fc" id="L32">        this.auditEventService = auditEventService;</span>
+<span class="fc" id="L33">    }</span>
+
+    /**
+     * GET  /audits : get a page of AuditEvents.
+     *
+     * @param pageable the pagination information
+     * @return the ResponseEntity with status 200 (OK) and the list of AuditEvents in body
+     * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
+     */
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity&lt;List&lt;AuditEvent&gt;&gt; getAll(Pageable pageable) throws URISyntaxException {
+<span class="fc" id="L44">        Page&lt;AuditEvent&gt; page = auditEventService.findAll(pageable);</span>
+<span class="fc" id="L45">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/audits&quot;);</span>
+<span class="fc" id="L46">        return new ResponseEntity&lt;&gt;(page.getContent(), headers, HttpStatus.OK);</span>
+    }
+
+    /**
+     * GET  /audits : get a page of AuditEvents between the fromDate and toDate.
+     *
+     * @param fromDate the start of the time period of AuditEvents to get
+     * @param toDate the end of the time period of AuditEvents to get
+     * @param pageable the pagination information
+     * @return the ResponseEntity with status 200 (OK) and the list of AuditEvents in body
+     * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
+     */
+
+    @RequestMapping(method = RequestMethod.GET,
+        params = {&quot;fromDate&quot;, &quot;toDate&quot;})
+    public ResponseEntity&lt;List&lt;AuditEvent&gt;&gt; getByDates(
+        @RequestParam(value = &quot;fromDate&quot;) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fromDate,
+        @RequestParam(value = &quot;toDate&quot;) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate toDate,
+        Pageable pageable) throws URISyntaxException {
+
+<span class="fc" id="L66">        Page&lt;AuditEvent&gt; page = auditEventService.findByDates(fromDate.atTime(0, 0), toDate.atTime(23, 59), pageable);</span>
+<span class="fc" id="L67">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/audits&quot;);</span>
+<span class="fc" id="L68">        return new ResponseEntity&lt;&gt;(page.getContent(), headers, HttpStatus.OK);</span>
+    }
+
+    /**
+     * GET  /audits/:id : get an AuditEvent by id.
+     *
+     * @param id the id of the entity to get
+     * @return the ResponseEntity with status 200 (OK) and the AuditEvent in body, or status 404 (Not Found)
+     */
+    @RequestMapping(value = &quot;/{id:.+}&quot;,
+        method = RequestMethod.GET)
+    public ResponseEntity&lt;AuditEvent&gt; get(@PathVariable Long id) {
+<span class="fc" id="L80">        return auditEventService.find(id)</span>
+<span class="fc" id="L81">                .map((entity) -&gt; new ResponseEntity&lt;&gt;(entity, HttpStatus.OK))</span>
+<span class="fc" id="L82">                .orElse(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

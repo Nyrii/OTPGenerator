@@ -14,10 +14,21 @@ public class googleOTPGenerator {
     @RequestMapping(value = "/{moduleType}",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody String uploadFile(@RequestParam("key") String key,
+    public @ResponseBody String generateGoogleOTP(@RequestParam("key") String key,
                                             @PathVariable String moduleType) {
-        String code = "mdr";
-        return new String(code);
+        String password = null;
+        Authentication auth = new Authentication();
+
+        try {
+            password = auth.GoogleAuthenticatorCode(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new String("Generation of password failed. Please verify your secret key.");
+        }
+        if (password == null) {
+            return new String("Generation of password failed : invalid password. Please try again later.");
+        }
+        return new String(password);
     }
 
 }

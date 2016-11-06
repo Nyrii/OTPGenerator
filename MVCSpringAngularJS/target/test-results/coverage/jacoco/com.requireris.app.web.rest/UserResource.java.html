@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Requireris</a> &gt; <a href="index.source.html" class="el_package">com.requireris.app.web.rest</a> &gt; <span class="el_source">UserResource.java</span></div><h1>UserResource.java</h1><pre class="source lang-java linenums">package com.requireris.app.web.rest;
+
+import com.requireris.app.config.Constants;
+import com.codahale.metrics.annotation.Timed;
+import com.requireris.app.domain.User;
+import com.requireris.app.repository.UserRepository;
+import com.requireris.app.repository.search.UserSearchRepository;
+import com.requireris.app.security.AuthoritiesConstants;
+import com.requireris.app.service.MailService;
+import com.requireris.app.service.UserService;
+import com.requireris.app.web.rest.vm.ManagedUserVM;
+import com.requireris.app.web.rest.util.HeaderUtil;
+import com.requireris.app.web.rest.util.PaginationUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.web.bind.annotation.*;
+
+import javax.inject.Inject;
+import java.net.URI;
+import java.net.URISyntaxException;
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import static org.elasticsearch.index.query.QueryBuilders.*;
+
+/**
+ * REST controller for managing users.
+ *
+ * &lt;p&gt;This class accesses the User entity, and needs to fetch its collection of authorities.&lt;/p&gt;
+ * &lt;p&gt;
+ * For a normal use-case, it would be better to have an eager relationship between User and Authority,
+ * and send everything to the client side: there would be no View Model and DTO, a lot less code, and an outer-join
+ * which would be good for performance.
+ * &lt;/p&gt;
+ * &lt;p&gt;
+ * We use a View Model and a DTO for 3 reasons:
+ * &lt;ul&gt;
+ * &lt;li&gt;We want to keep a lazy association between the user and the authorities, because people will
+ * quite often do relationships with the user, and we don't want them to get the authorities all
+ * the time for nothing (for performance reasons). This is the #1 goal: we should not impact our users'
+ * application because of this use-case.&lt;/li&gt;
+ * &lt;li&gt; Not having an outer join causes n+1 requests to the database. This is not a real issue as
+ * we have by default a second-level cache. This means on the first HTTP call we do the n+1 requests,
+ * but then all authorities come from the cache, so in fact it's much better than doing an outer join
+ * (which will get lots of data from the database, for each HTTP call).&lt;/li&gt;
+ * &lt;li&gt; As this manages users, for security reasons, we'd rather have a DTO layer.&lt;/li&gt;
+ * &lt;/ul&gt;
+ * &lt;p&gt;Another option would be to have a specific JPA entity graph to handle this case.&lt;/p&gt;
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+<span class="fc" id="L61">public class UserResource {</span>
+
+<span class="fc" id="L63">    private final Logger log = LoggerFactory.getLogger(UserResource.class);</span>
+
+    @Inject
+    private UserRepository userRepository;
+
+    @Inject
+    private MailService mailService;
+
+    @Inject
+    private UserService userService;
+
+    @Inject
+    private UserSearchRepository userSearchRepository;
+
+    /**
+     * POST  /users  : Creates a new user.
+     * &lt;p&gt;
+     * Creates a new user if the login and email are not already used, and sends an
+     * mail with an activation link.
+     * The user needs to be activated on creation.
+     * &lt;/p&gt;
+     *
+     * @param managedUserVM the user to create
+     * @param request the HTTP request
+     * @return the ResponseEntity with status 201 (Created) and with body the new user, or with status 400 (Bad Request) if the login or email is already in use
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @RequestMapping(value = &quot;/users&quot;,
+        method = RequestMethod.POST,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    @Secured(AuthoritiesConstants.ADMIN)
+    public ResponseEntity&lt;?&gt; createUser(@RequestBody ManagedUserVM managedUserVM, HttpServletRequest request) throws URISyntaxException {
+<span class="nc" id="L96">        log.debug(&quot;REST request to save User : {}&quot;, managedUserVM);</span>
+
+        //Lowercase the user login before comparing with database
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        if (userRepository.findOneByLogin(managedUserVM.getLogin().toLowerCase()).isPresent()) {</span>
+<span class="nc" id="L100">            return ResponseEntity.badRequest()</span>
+<span class="nc" id="L101">                .headers(HeaderUtil.createFailureAlert(&quot;userManagement&quot;, &quot;userexists&quot;, &quot;Login already in use&quot;))</span>
+<span class="nc" id="L102">                .body(null);</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">        } else if (userRepository.findOneByEmail(managedUserVM.getEmail()).isPresent()) {</span>
+<span class="nc" id="L104">            return ResponseEntity.badRequest()</span>
+<span class="nc" id="L105">                .headers(HeaderUtil.createFailureAlert(&quot;userManagement&quot;, &quot;emailexists&quot;, &quot;Email already in use&quot;))</span>
+<span class="nc" id="L106">                .body(null);</span>
+        } else {
+<span class="nc" id="L108">            User newUser = userService.createUser(managedUserVM);</span>
+<span class="nc" id="L109">            String baseUrl = request.getScheme() + // &quot;http&quot;</span>
+            &quot;://&quot; +                                // &quot;://&quot;
+<span class="nc" id="L111">            request.getServerName() +              // &quot;myhost&quot;</span>
+            &quot;:&quot; +                                  // &quot;:&quot;
+<span class="nc" id="L113">            request.getServerPort() +              // &quot;80&quot;</span>
+<span class="nc" id="L114">            request.getContextPath();              // &quot;/myContextPath&quot; or &quot;&quot; if deployed in root context</span>
+<span class="nc" id="L115">            mailService.sendCreationEmail(newUser, baseUrl);</span>
+<span class="nc" id="L116">            return ResponseEntity.created(new URI(&quot;/api/users/&quot; + newUser.getLogin()))</span>
+<span class="nc" id="L117">                .headers(HeaderUtil.createAlert( &quot;userManagement.created&quot;, newUser.getLogin()))</span>
+<span class="nc" id="L118">                .body(newUser);</span>
+        }
+    }
+
+    /**
+     * PUT  /users : Updates an existing User.
+     *
+     * @param managedUserVM the user to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated user,
+     * or with status 400 (Bad Request) if the login or email is already in use,
+     * or with status 500 (Internal Server Error) if the user couldn't be updated
+     */
+    @RequestMapping(value = &quot;/users&quot;,
+        method = RequestMethod.PUT,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    @Secured(AuthoritiesConstants.ADMIN)
+    public ResponseEntity&lt;ManagedUserVM&gt; updateUser(@RequestBody ManagedUserVM managedUserVM) {
+<span class="nc" id="L136">        log.debug(&quot;REST request to update User : {}&quot;, managedUserVM);</span>
+<span class="nc" id="L137">        Optional&lt;User&gt; existingUser = userRepository.findOneByEmail(managedUserVM.getEmail());</span>
+<span class="nc bnc" id="L138" title="All 4 branches missed.">        if (existingUser.isPresent() &amp;&amp; (!existingUser.get().getId().equals(managedUserVM.getId()))) {</span>
+<span class="nc" id="L139">            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(&quot;userManagement&quot;, &quot;emailexists&quot;, &quot;E-mail already in use&quot;)).body(null);</span>
+        }
+<span class="nc" id="L141">        existingUser = userRepository.findOneByLogin(managedUserVM.getLogin().toLowerCase());</span>
+<span class="nc bnc" id="L142" title="All 4 branches missed.">        if (existingUser.isPresent() &amp;&amp; (!existingUser.get().getId().equals(managedUserVM.getId()))) {</span>
+<span class="nc" id="L143">            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(&quot;userManagement&quot;, &quot;userexists&quot;, &quot;Login already in use&quot;)).body(null);</span>
+        }
+<span class="nc" id="L145">        userService.updateUser(managedUserVM.getId(), managedUserVM.getLogin(), managedUserVM.getFirstName(),</span>
+<span class="nc" id="L146">            managedUserVM.getLastName(), managedUserVM.getEmail(), managedUserVM.isActivated(),</span>
+<span class="nc" id="L147">            managedUserVM.getLangKey(), managedUserVM.getAuthorities());</span>
+
+<span class="nc" id="L149">        return ResponseEntity.ok()</span>
+<span class="nc" id="L150">            .headers(HeaderUtil.createAlert(&quot;userManagement.updated&quot;, managedUserVM.getLogin()))</span>
+<span class="nc" id="L151">            .body(new ManagedUserVM(userService.getUserWithAuthorities(managedUserVM.getId())));</span>
+    }
+
+    /**
+     * GET  /users : get all users.
+     * 
+     * @param pageable the pagination information
+     * @return the ResponseEntity with status 200 (OK) and with body all users
+     * @throws URISyntaxException if the pagination headers couldn't be generated
+     */
+    @RequestMapping(value = &quot;/users&quot;,
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity&lt;List&lt;ManagedUserVM&gt;&gt; getAllUsers(Pageable pageable)
+        throws URISyntaxException {
+<span class="nc" id="L167">        Page&lt;User&gt; page = userRepository.findAllWithAuthorities(pageable);</span>
+<span class="nc" id="L168">        List&lt;ManagedUserVM&gt; managedUserVMs = page.getContent().stream()</span>
+<span class="nc" id="L169">            .map(ManagedUserVM::new)</span>
+<span class="nc" id="L170">            .collect(Collectors.toList());</span>
+<span class="nc" id="L171">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, &quot;/api/users&quot;);</span>
+<span class="nc" id="L172">        return new ResponseEntity&lt;&gt;(managedUserVMs, headers, HttpStatus.OK);</span>
+    }
+
+    /**
+     * GET  /users/:login : get the &quot;login&quot; user.
+     *
+     * @param login the login of the user to find
+     * @return the ResponseEntity with status 200 (OK) and with body the &quot;login&quot; user, or with status 404 (Not Found)
+     */
+    @RequestMapping(value = &quot;/users/{login:&quot; + Constants.LOGIN_REGEX + &quot;}&quot;,
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity&lt;ManagedUserVM&gt; getUser(@PathVariable String login) {
+<span class="fc" id="L186">        log.debug(&quot;REST request to get User : {}&quot;, login);</span>
+<span class="fc" id="L187">        return userService.getUserWithAuthoritiesByLogin(login)</span>
+<span class="fc" id="L188">                .map(ManagedUserVM::new)</span>
+<span class="fc" id="L189">                .map(managedUserVM -&gt; new ResponseEntity&lt;&gt;(managedUserVM, HttpStatus.OK))</span>
+<span class="fc" id="L190">                .orElse(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));</span>
+    }
+
+    /**
+     * DELETE /users/:login : delete the &quot;login&quot; User.
+     *
+     * @param login the login of the user to delete
+     * @return the ResponseEntity with status 200 (OK)
+     */
+    @RequestMapping(value = &quot;/users/{login:&quot; + Constants.LOGIN_REGEX + &quot;}&quot;,
+        method = RequestMethod.DELETE,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    @Secured(AuthoritiesConstants.ADMIN)
+    public ResponseEntity&lt;Void&gt; deleteUser(@PathVariable String login) {
+<span class="nc" id="L205">        log.debug(&quot;REST request to delete User: {}&quot;, login);</span>
+<span class="nc" id="L206">        userService.deleteUser(login);</span>
+<span class="nc" id="L207">        return ResponseEntity.ok().headers(HeaderUtil.createAlert( &quot;userManagement.deleted&quot;, login)).build();</span>
+    }
+
+    /**
+     * SEARCH  /_search/users/:query : search for the User corresponding
+     * to the query.
+     *
+     * @param query the query to search
+     * @return the result of the search
+     */
+    @RequestMapping(value = &quot;/_search/users/{query}&quot;,
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List&lt;User&gt; search(@PathVariable String query) {
+<span class="nc" id="L222">        return StreamSupport</span>
+<span class="nc" id="L223">            .stream(userSearchRepository.search(queryStringQuery(query)).spliterator(), false)</span>
+<span class="nc" id="L224">            .collect(Collectors.toList());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
