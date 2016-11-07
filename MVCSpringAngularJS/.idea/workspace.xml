@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bbdf55-2909-4af9-8c73-0923bb2871dc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/Authentication.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/googleOTPGenerator.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/content/images/logo.png" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/_state/state-0.st" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog-1.tlog" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/_state/state-0.st" afterPath="" />
@@ -15,15 +14,16 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/_state/state-0.st" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/index/segments_2" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/SecurityConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/requireris/app/config/SecurityConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/Authentication.class" afterPath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/Authentication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/googleOTPGenerator.class" afterPath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/googleOTPGenerator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" afterPath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/application-dev.yml" afterPath="$PROJECT_DIR$/target/classes/config/application-dev.yml" />
     </list>
@@ -50,8 +50,8 @@
       <file leaf-file-name="mainView.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+            <state relative-caret-position="360">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -60,8 +60,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -101,12 +101,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/config/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/gulp/config.js" />
         <option value="$PROJECT_DIR$/src/main/resources/config/application-dev.yml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
       </list>
     </option>
   </component>
@@ -233,6 +233,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -481,6 +485,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/content/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget" />
     </key>
   </component>
@@ -923,7 +928,7 @@
       <workItem from="1478441790320" duration="10415000" />
       <workItem from="1478464970886" duration="6927000" />
       <workItem from="1478474632429" duration="250000" />
-      <workItem from="1478508628956" duration="2798000" />
+      <workItem from="1478508628956" duration="4474000" />
     </task>
     <task id="LOCAL-00001" summary="Changed css, server port and removed authentication process.">
       <created>1478521680544</created>
@@ -932,11 +937,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478521680544</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Check of secret key added">
+      <created>1478522299786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478522299786</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20390000" />
+    <option name="totallyTimeSpent" value="22066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1512" height="1107" extended-state="0" />
@@ -951,7 +963,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32760364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32760364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -972,6 +984,37 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24965987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32760364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24965987" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -986,7 +1029,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed css, server port and removed authentication process." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed css, server port and removed authentication process." />
+    <MESSAGE value="Check of secret key added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check of secret key added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1193,14 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1225,10 +1261,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
           <folding />
         </state>
       </provider>
