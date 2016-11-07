@@ -50,7 +50,7 @@ public class Authentication {
 		}
 		long value = new Date().getTime() / TimeUnit.SECONDS.toMillis(30);
 
-		base32 base = new base32(base32.Alphabet.BASE32, false, true);
+		Base32 base = new Base32(Base32.Alphabet.BASE32, false, true);
 		byte[] key = base.fromString(secret);
 
 		byte[] data = new byte[8];
