@@ -1,1 +1,4 @@
 MVCSpringAngularJS/target/**
+MVCSpringAngularJS/out/**
+MVCSpringAngularJS/src/main/java/com/requireris/app/web/rest/Constants.java
+MVCSpringAngularJS/.idea/**

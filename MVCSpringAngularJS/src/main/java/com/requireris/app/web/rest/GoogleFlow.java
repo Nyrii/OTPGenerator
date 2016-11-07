@@ -4,11 +4,10 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
-import com.google.api.services.drive.DriveScopes;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
-import java.util.Collections;
+import java.util.Arrays;
 
 /**
  * Created by wilmot_g on 07/11/16.
@@ -23,7 +22,7 @@ public class GoogleFlow {
 
 		GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
 				GoogleNetHttpTransport.newTrustedTransport(), JacksonFactory.getDefaultInstance(), clientSecrets,
-				Collections.singleton(DriveScopes.DRIVE))
+				Arrays.asList("https://www.googleapis.com/auth/plus.me"))
 				.setAccessType("offline")
 				.build();
 
