@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bbdf55-2909-4af9-8c73-0923bb2871dc" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/Authentication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/googleOTPGenerator.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/_state/state-0.st" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog-1.tlog" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/_state/state-0.st" afterPath="" />
@@ -18,14 +20,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/requireris/app/config/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/requireris/app/config/SecurityConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/application-dev.yml" afterPath="$PROJECT_DIR$/src/main/resources/config/application-dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" afterPath="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" afterPath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/application-dev.yml" afterPath="$PROJECT_DIR$/target/classes/config/application-dev.yml" />
     </list>
     <ignored path="requireris.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +60,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            <state relative-caret-position="225">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,9 +95,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetDirective.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/base32.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/components/login/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/layouts/navbar/navbar.html" />
@@ -107,6 +104,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
       </list>
     </option>
   </component>
@@ -923,12 +923,20 @@
       <workItem from="1478441790320" duration="10415000" />
       <workItem from="1478464970886" duration="6927000" />
       <workItem from="1478474632429" duration="250000" />
-      <workItem from="1478508628956" duration="2167000" />
+      <workItem from="1478508628956" duration="2798000" />
     </task>
+    <task id="LOCAL-00001" summary="Changed css, server port and removed authentication process.">
+      <created>1478521680544</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1478521680544</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19759000" />
+    <option name="totallyTimeSpent" value="20390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1512" height="1107" extended-state="0" />
@@ -975,6 +983,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed css, server port and removed authentication process." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed css, server port and removed authentication process." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1077,26 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetDirective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1115,13 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1216,10 +1201,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/googleOTPGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="225">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>

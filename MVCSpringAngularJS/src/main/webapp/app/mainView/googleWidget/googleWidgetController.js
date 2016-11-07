@@ -10,20 +10,24 @@ angular.module('requirerisApp')
             var form = $("#form").serializeArray();
             $("#secretID").val('');
 
-            $ .ajax({
-                url: "/api/" + $scope.module + "?_csrf=" + getCSRF(),
-                type: "POST",
-                data: {
-                    key: form[0].value
-                },
-                dataType: "text",
-                success: function (data) {
-                    $('#otp').html(data);
-                },
-                error: function (data) {
-                    $('#otp').html(data);
-                }
-            });
+            if (form[0].value != null && form[0].value != "") {
+                $.ajax({
+                    url: "/api/" + $scope.module + "?_csrf=" + getCSRF(),
+                    type: "POST",
+                    data: {
+                        key: form[0].value
+                    },
+                    dataType: "text",
+                    success: function (data) {
+                        $('#otp').html(data);
+                    },
+                    error: function (data) {
+                        $('#otp').html(data);
+                    }
+                });
+            } else {
+                $('#otp').html("Your secret key is invalid.");
+            }
         });
 
         function getCSRF() {

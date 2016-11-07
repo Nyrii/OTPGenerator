@@ -20,6 +20,9 @@ public class googleOTPGenerator {
         Authentication auth = new Authentication();
 
         try {
+            if (key == null || key == "") {
+                return new String("Generation of password failed : empty key.");
+            }
             password = auth.GoogleAuthenticatorCode(key);
         } catch (Exception e) {
             e.printStackTrace();

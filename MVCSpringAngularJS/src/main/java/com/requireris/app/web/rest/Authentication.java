@@ -45,6 +45,9 @@ public class Authentication {
 	}
 
 	public String GoogleAuthenticatorCode(String secret) throws Exception {
+		if (secret == null || secret == "") {
+			throw new Exception("Secret key does not exist.");
+		}
 		long value = new Date().getTime() / TimeUnit.SECONDS.toMillis(30);
 
 		base32 base = new base32(base32.Alphabet.BASE32, false, true);
