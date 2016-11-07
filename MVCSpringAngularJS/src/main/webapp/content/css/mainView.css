@@ -25,7 +25,7 @@ a:hover {
  */
 
 .generator-container {
-    height:95%;
+    height:100%;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -44,6 +44,10 @@ a:hover {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+}
+
+.inner {
+  padding:30px;
 }
 
 /*
@@ -113,7 +117,7 @@ a:hover {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
-    top: 50px;
+    top: 0px;
   }
   .mastfoot {
     position: fixed;
