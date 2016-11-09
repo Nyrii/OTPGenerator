@@ -12,7 +12,7 @@ angular.module('requirerisApp')
 
             if (form[0].value != null && form[0].value != "") {
                 $.ajax({
-                    url: "/api/" + $scope.module + "?_csrf=" + getCSRF(),
+                    url: "/api/generate/" + $scope.module + "?_csrf=" + getCSRF(),
                     type: "POST",
                     data: {
                         key: form[0].value

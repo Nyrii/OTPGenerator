@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3372e1e9-3fb4-4b8e-9261-a6839a1c80e5" name="Default" comment="Project initialization + implementation of Authentication class (test)" />
+    <list default="true" id="3372e1e9-3fb4-4b8e-9261-a6839a1c80e5" name="Default" comment="Project initialization + implementation of Authentication class (test)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/.idea/artifacts/requireris_war_exploded.xml" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/.idea/artifacts/requireris_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/.idea/workspace.xml" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/java/com/requireris/app/web/rest/Constants.java" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/java/com/requireris/app/web/rest/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" afterPath="$PROJECT_DIR$/MVCSpringAngularJS/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Authentication.java" afterPath="$PROJECT_DIR$/src/com/company/Authentication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/base32.java" afterPath="$PROJECT_DIR$/src/com/company/base32.java" />
+    </list>
     <ignored path="OTPGenerator.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,7 +36,28 @@
     <favorites_list name="OTPGenerator" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Authentication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Authentication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base32.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/base32.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2420">
+              <caret line="166" column="1" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,8 +83,8 @@
         <option value="$PROJECT_DIR$/src/com/company/test2.java" />
         <option value="$PROJECT_DIR$/src/com/company/Test3.java" />
         <option value="$PROJECT_DIR$/src/com/company/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/company/base32.java" />
         <option value="$PROJECT_DIR$/src/com/company/Authentication.java" />
+        <option value="$PROJECT_DIR$/src/com/company/base32.java" />
       </list>
     </option>
   </component>
@@ -98,6 +134,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -126,15 +165,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OTPGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OTPGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="MVCSpringAngularJS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -699,15 +753,16 @@
       <workItem from="1478160732804" duration="114000" />
       <workItem from="1478474536956" duration="82000" />
       <workItem from="1478527824151" duration="28000" />
+      <workItem from="1478623886063" duration="747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58070000" />
+    <option name="totallyTimeSpent" value="58817000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="30" width="1920" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -857,15 +912,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Authentication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="278">
+          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/base32.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-555">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="2420">
+          <caret line="166" column="1" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

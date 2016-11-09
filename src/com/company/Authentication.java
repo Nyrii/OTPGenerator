@@ -4,6 +4,7 @@ import org.apache.commons.codec.binary.Hex;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -49,6 +50,8 @@ public class Authentication {
 
 		base32 base = new base32(base32.Alphabet.BASE32, false, true);
 		byte[] key = base.fromString(secret);
+
+		System.out.println(Arrays.toString(key));
 
 		byte[] data = new byte[8];
 		for (int i = 8; i-- > 0; value >>>= 8) {

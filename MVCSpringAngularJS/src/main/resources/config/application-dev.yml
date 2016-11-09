@@ -62,6 +62,7 @@ liquibase:
 
 server:
     port: 4242
+    host: app.requireris.dev
 
 # ===================================================================
 # JHipster specific properties
