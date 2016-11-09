@@ -51,7 +51,7 @@ angular.module('requirerisApp')
 
 						var now = new Date(),
 						exp = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate());
-						$cookies.put('Requireris', atob(data.id), {
+						$cookies.put('Requireris', data.id, {
 							expires: exp
 						});
 					},

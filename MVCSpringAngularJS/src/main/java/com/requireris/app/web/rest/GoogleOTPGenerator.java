@@ -49,7 +49,8 @@ public class GoogleOTPGenerator {
         Authentication auth = new Authentication();
 
 		for (Cookie c : request.getCookies())
-			System.out.println("Cookie : " + c.getName() + " " + c.getValue());
+			if (c.getName().equals("Requireris"))
+				System.out.println("Cookie : " + c.getName() + " " + new String(Base64.decodeBase64 (c.getValue())));
 
         try {
             if (key == null || key.equals("")) {
