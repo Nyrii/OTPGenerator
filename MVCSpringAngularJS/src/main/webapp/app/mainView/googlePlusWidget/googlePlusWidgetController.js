@@ -4,7 +4,7 @@
 
 'use strict';
 angular.module('requirerisApp')
-		.controller('googlePlusWidgetController', ["$scope", function ($scope) {
+		.controller('googlePlusWidgetController', ["$scope", "$cookies", function ($scope, $cookies) {
 
 			$("a").click(function () {
 				$.ajax({
@@ -43,8 +43,17 @@ angular.module('requirerisApp')
 					},
 					dataType: "json",
 					success: function (data) {
-						console.log(data);
 						//TODO : data = error -> pas co. sinon co. (Y'a le nom dedans)
+						if (data.error) {
+							return;
+							console.log(data.error);
+						}
+
+						var now = new Date(),
+						exp = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate());
+						$cookies.put('Requireris', atob(data.id), {
+							expires: exp
+						});
 					},
 					error: function (data) {
 						console.log(data);

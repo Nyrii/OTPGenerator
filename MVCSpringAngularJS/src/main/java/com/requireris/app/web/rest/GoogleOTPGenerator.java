@@ -11,6 +11,7 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.ArrayMap;
+import com.google.api.client.util.Base64;
 import com.google.api.services.oauth2.Oauth2;
 import com.google.api.services.oauth2.model.Userinfoplus;
 import org.json.JSONException;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Collections;
@@ -31,7 +33,7 @@ import java.util.Map;
 @RequestMapping("/api")
 public class GoogleOTPGenerator {
 
-	Map<String, JSONObject> infos = new ArrayMap<>();
+	private Map<String, JSONObject> infos = new ArrayMap<>();
 
 	@Autowired
 	private HttpServletRequest request;
@@ -42,13 +44,15 @@ public class GoogleOTPGenerator {
     @RequestMapping(value = "/generate/{moduleType}",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody String generateGoogleOTP(@RequestParam("key") String key,
-                                            @PathVariable String moduleType) {
-        String password = null;
+    public @ResponseBody String generateGoogleOTP(@RequestParam("key") String key, @PathVariable String moduleType) {
+		String password = null;
         Authentication auth = new Authentication();
 
+		for (Cookie c : request.getCookies())
+			System.out.println("Cookie : " + c.getName() + " " + c.getValue());
+
         try {
-            if (key == null || key == "") {
+            if (key == null || key.equals("")) {
                 return "Generation of password failed : empty key.";
             }
             password = auth.GoogleAuthenticatorCode(key);
@@ -117,6 +121,7 @@ public class GoogleOTPGenerator {
 			JSONObject info = infos.get(key);
 			info.remove("access");
 			info.remove("refresh");
+			info.put("id", Base64.encodeBase64String(info.getString("id").getBytes()));
 			return info.toString();
 		}
 		JSONObject err = new JSONObject();

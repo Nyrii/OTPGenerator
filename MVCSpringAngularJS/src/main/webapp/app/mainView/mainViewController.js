@@ -4,8 +4,8 @@
 
 'use strict';
 angular.module('requirerisApp')
-    .controller('mainViewController', ["$scope", "LoginService", "Auth",
-        function ($scope, $loginService, $auth) {
+    .controller('mainViewController', ["$cookies", "$scope", "LoginService", "Auth",
+        function ($cookies, $scope, $loginService, $auth) {
 
         $(document).ready(function() {
             var active_tab_selector = $('.nav > li.active > a').attr('href');
