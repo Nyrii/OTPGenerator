@@ -40,7 +40,7 @@ angular.module('requirerisApp')
             var target_tab_selector = $(this).attr('href');
             $(target_tab_selector).css('display', '');
 
-            var dict = ["#Google", "#Github"];
+            var dict = ["#Google", "#Github", "#Snapchat", "#Facebook", "#Dropbox", "#OVH"];
 
             $.each(dict, function(key, value) {
                 if (value == target_tab_selector) {

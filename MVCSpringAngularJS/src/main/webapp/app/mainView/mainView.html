@@ -11,7 +11,11 @@
                         <nav>
                           <ul class="nav masthead-nav">
                               <li class="active"><a href="#Google">Google</a></li>
-                              <!--<li><a href="#Github">GitHub</a></li>-->
+                              <li><a href="#Github">GitHub</a></li>
+                              <li><a href="#Snapchat">Snapchat</a></li>
+                              <li><a href="#Facebook">Facebook</a></li>
+                              <li><a href="#Dropbox">Dropbox</a></li>
+                              <li><a href="#OVH">OVH</a></li>
                           </ul>
                         </nav>
                     </div>
@@ -23,11 +27,15 @@
               <h1 class="cover-heading">Generate a new <span id="module"></span> password</h1>
               <p class="lead">Just click the button to get a new one-time password. Once the latter is generated and used, you will not be able to use it again.</p>
                 <form id="form">
-                  <p>
-                    <label for="secretID">Update key : </label> <input type="text" id="secretID" name="secret" style="color:black;" />
-                  </p>
-                  <google-widget id="Google" style="display:none;" module="google"></google-widget>
-                  <submit id="Github" class="btn btn-lg btn-default" style="display:none" style="color:white">Generate</submit>
+                    <p>
+                        <label for="secretID">Update key : </label> <input type="text" id="secretID" name="secret" style="color:black;" />
+                    </p>
+                    <google-widget id="Google" style="display:none;" module="google"></google-widget>
+                    <github-widget id="Github" style="display:none;" module="github"></github-widget>
+                    <snapchat-widget id="Snapchat" style="display:none;" module="snapchat"></snapchat-widget>
+                    <facebook-widget id="Facebook" style="display:none;" module="facebook"></facebook-widget>
+                    <dropbox-widget id="Dropbox" style="display:none;" module="dropbox"></dropbox-widget>
+                    <ovh-widget id="OVH" style="display:none;" module="ovh"></ovh-widget>
                 </form>
               </p>
               <h2 id="otp">

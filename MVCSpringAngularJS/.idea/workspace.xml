@@ -1,25 +1,433 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16bbdf55-2909-4af9-8c73-0923bb2871dc" name="Default" comment="Pushed missing files">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/Authentication.class" afterPath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/Authentication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../out/production/OTPGenerator/com/company/Authentication.class" afterPath="$PROJECT_DIR$/../out/production/OTPGenerator/com/company/Authentication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/requireris_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/requireris_war_exploded.xml" />
+    <list default="true" id="16bbdf55-2909-4af9-8c73-0923bb2871dc" name="Default" comment="Add of Facebook, OVH, Snapchat, Github, Dropbox modules. Still have to test for each account.&#10;+ Bug encountered : &quot;Key is invalid&quot; then key generated is displayed instant when entering a short and invalid secret key.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidgetController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidgetDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidgetController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidgetDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidgetController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidgetDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidgetController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidgetDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidgetController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidgetDirective.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/.h2.server.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/banner.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/ApplicationWebXml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/RequirerisApp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/aop/logging/LoggingAspect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/async/ExceptionHandlingAsyncTaskExecutor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/AsyncConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/CacheConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/CloudDatabaseConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/DatabaseConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/DefaultProfileUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/ElasticSearchConfiguration$CustomEntityMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/ElasticSearchConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Async.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Cache$Ehcache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Cache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Http$Cache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Http.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Logging$Logstash.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Logging.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Mail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Metrics$Graphite.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Metrics$Jmx.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Metrics$Logs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Metrics$Spark.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Metrics.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Ribbon.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Security$RememberMe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Security.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties$Swagger.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JHipsterProperties.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/JacksonConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/LocaleConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/LoggingAspectConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/LoggingConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/MetricsConfiguration$GraphiteRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/MetricsConfiguration$SparkRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/MetricsConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/SecurityConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/ThymeleafConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/WebConfigurer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/apidoc/PageableParameterBuilderPlugin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/apidoc/SwaggerConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/audit/AuditEventConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/liquibase/AsyncSpringLiquibase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/locale/AngularCookieLocaleResolver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/config/locale/AngularCookieLocaleResolver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/AbstractAuditingEntity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/Authority.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/PersistentAuditEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/PersistentToken.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/FixedH2Dialect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310DateConverters$DateToLocalDateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310DateConverters$DateToLocalDateTimeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310DateConverters$DateToZonedDateTimeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310DateConverters$LocalDateTimeToDateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310DateConverters$LocalDateToDateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310DateConverters$ZonedDateTimeToDateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310DateConverters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310PersistenceConverters$LocalDateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310PersistenceConverters$LocalDateTimeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310PersistenceConverters$ZonedDateTimeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/domain/util/JSR310PersistenceConverters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/repository/AuthorityRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/repository/CustomAuditEventRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/repository/PersistenceAuditEventRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/repository/PersistentTokenRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/repository/UserRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/repository/search/UserSearchRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/AjaxAuthenticationFailureHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/AjaxAuthenticationSuccessHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/AjaxLogoutSuccessHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/AuthoritiesConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/CustomAccessDeniedHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/CustomPersistentRememberMeServices.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/Http401UnauthorizedEntryPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/SecurityUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/SpringSecurityAuditorAware.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/UserDetailsService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/security/UserNotActivatedException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/service/AuditEventService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/service/MailService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/service/dto/UserDTO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/service/mapper/UserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/service/mapper/UserMapperImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/service/util/RandomUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/filter/CachingHttpHeadersFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/filter/CsrfCookieGeneratorFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/AccountResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/AuditResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/Authentication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/LogsResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/ProfileInfoResource$ProfileInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/ProfileInfoResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/UserResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/errors/CustomParameterizedException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/errors/ErrorConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/errors/ErrorVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/errors/ExceptionTranslator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/errors/FieldErrorVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/errors/ParameterizedErrorVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/util/HeaderUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/util/PaginationUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/vm/KeyAndPasswordVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/vm/LoggerVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/requireris/app/web/rest/vm/ManagedUserVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/application-dev.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/application-prod.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/application.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/liquibase/authorities.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/liquibase/changelog/00000000000000_initial_schema.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/liquibase/master.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/liquibase/users.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/liquibase/users_authorities.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ehcache.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/i18n/messages.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/i18n/messages_en.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/logback-spring.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mails/activationEmail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mails/creationEmail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mails/passwordResetEmail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/templates/error.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/index/write.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/index/write.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/index/write.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/index/write.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/index/write.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/node.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/generated-sources/com/requireris/app/service/mapper/UserMapperImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.requireris.app.security.SecurityUtilsUnitTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.requireris.app.service.UserServiceIntTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.requireris.app.web.rest.AccountResourceIntTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.requireris.app.web.rest.AuditResourceIntTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.requireris.app.web.rest.UserResourceIntTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/com.requireris.app.security.SecurityUtilsUnitTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/com.requireris.app.service.UserServiceIntTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/com.requireris.app.web.rest.AccountResourceIntTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/com.requireris.app.web.rest.AuditResourceIntTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/com.requireris.app.web.rest.UserResourceIntTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/requireris/app/config/elasticsearch/IndexReinitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/requireris/app/security/SecurityUtilsUnitTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/requireris/app/service/UserServiceIntTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/requireris/app/web/rest/AccountResourceIntTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/requireris/app/web/rest/AuditResourceIntTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/requireris/app/web/rest/TestUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/requireris/app/web/rest/UserResourceIntTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/config/application.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/ehcache.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/logback-test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.aop.logging/LoggingAspect.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.aop.logging/LoggingAspect.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.aop.logging/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.aop.logging/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.async/ExceptionHandlingAsyncTaskExecutor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.async/ExceptionHandlingAsyncTaskExecutor.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.async/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.async/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.apidoc/PageableParameterBuilderPlugin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.apidoc/PageableParameterBuilderPlugin.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.apidoc/SwaggerConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.apidoc/SwaggerConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.apidoc/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.apidoc/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.audit/AuditEventConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.audit/AuditEventConverter.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.audit/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.audit/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.liquibase/AsyncSpringLiquibase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.liquibase/AsyncSpringLiquibase.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.liquibase/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.liquibase/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.locale/AngularCookieLocaleResolver$1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.locale/AngularCookieLocaleResolver.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.locale/AngularCookieLocaleResolver.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.locale/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config.locale/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/AsyncConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/AsyncConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/CacheConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/CacheConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/CloudDatabaseConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/CloudDatabaseConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/Constants.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/Constants.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/DatabaseConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/DatabaseConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/DefaultProfileUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/DefaultProfileUtil.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/ElasticSearchConfiguration$CustomEntityMapper.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/ElasticSearchConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/ElasticSearchConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Async.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Cache$Ehcache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Cache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Http$Cache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Http.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Logging$Logstash.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Logging.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Mail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Metrics$Graphite.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Metrics$Jmx.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Metrics$Logs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Metrics$Spark.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Metrics.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Ribbon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Security$RememberMe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Security.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties$Swagger.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JHipsterProperties.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JacksonConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/JacksonConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/LocaleConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/LocaleConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/LoggingAspectConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/LoggingAspectConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/LoggingConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/LoggingConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/MetricsConfiguration$GraphiteRegistry.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/MetricsConfiguration$SparkRegistry.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/MetricsConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/MetricsConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/SecurityConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/SecurityConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/ThymeleafConfiguration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/ThymeleafConfiguration.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/WebConfigurer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/WebConfigurer.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.config/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/FixedH2Dialect.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/FixedH2Dialect.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters$DateToLocalDateConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters$DateToLocalDateTimeConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters$DateToZonedDateTimeConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters$LocalDateTimeToDateConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters$LocalDateToDateConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters$ZonedDateTimeToDateConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310DateConverters.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310PersistenceConverters$LocalDateConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310PersistenceConverters$LocalDateTimeConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310PersistenceConverters$ZonedDateTimeConverter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310PersistenceConverters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/JSR310PersistenceConverters.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain.util/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/AbstractAuditingEntity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/AbstractAuditingEntity.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/Authority.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/Authority.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/PersistentAuditEvent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/PersistentAuditEvent.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/PersistentToken.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/PersistentToken.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/User.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/User.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.domain/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.repository/CustomAuditEventRepository.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.repository/CustomAuditEventRepository.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.repository/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.repository/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AjaxAuthenticationFailureHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AjaxAuthenticationFailureHandler.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AjaxAuthenticationSuccessHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AjaxAuthenticationSuccessHandler.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AjaxLogoutSuccessHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AjaxLogoutSuccessHandler.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AuthoritiesConstants.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/AuthoritiesConstants.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/CustomAccessDeniedHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/CustomAccessDeniedHandler.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/CustomPersistentRememberMeServices.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/CustomPersistentRememberMeServices.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/Http401UnauthorizedEntryPoint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/Http401UnauthorizedEntryPoint.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/SecurityUtils.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/SecurityUtils.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/SpringSecurityAuditorAware.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/SpringSecurityAuditorAware.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/UserDetailsService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/UserDetailsService.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/UserNotActivatedException.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/UserNotActivatedException.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.security/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.dto/UserDTO.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.dto/UserDTO.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.dto/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.dto/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.mapper/UserMapper.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.mapper/UserMapper.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.mapper/UserMapperImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.mapper/UserMapperImpl.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.mapper/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.mapper/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.util/RandomUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.util/RandomUtil.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.util/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service.util/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/AuditEventService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/AuditEventService.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/MailService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/MailService.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/UserService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/UserService.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.service/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.filter/CachingHttpHeadersFilter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.filter/CachingHttpHeadersFilter.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.filter/CsrfCookieGeneratorFilter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.filter/CsrfCookieGeneratorFilter.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.filter/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.filter/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/CustomParameterizedException.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/CustomParameterizedException.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ErrorConstants.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ErrorConstants.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ErrorVM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ErrorVM.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ExceptionTranslator.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ExceptionTranslator.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/FieldErrorVM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/FieldErrorVM.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ParameterizedErrorVM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/ParameterizedErrorVM.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.errors/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.util/HeaderUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.util/HeaderUtil.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.util/PaginationUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.util/PaginationUtil.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.util/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.util/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/KeyAndPasswordVM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/KeyAndPasswordVM.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/LoggerVM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/LoggerVM.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/ManagedUserVM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/ManagedUserVM.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest.vm/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/AccountResource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/AccountResource.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/AuditResource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/AuditResource.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/Authentication.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/Authentication.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/LogsResource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/LogsResource.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/ProfileInfoResource$ProfileInfoResponse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/ProfileInfoResource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/ProfileInfoResource.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/UserResource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/UserResource.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/base32$Alphabet.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/base32.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/base32.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/googleOTPGenerator.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/googleOTPGenerator.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app.web.rest/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app/ApplicationWebXml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app/ApplicationWebXml.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app/RequirerisApp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app/RequirerisApp.java.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/com.requireris.app/index.source.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/branchfc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/branchnc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/branchpc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/bundle.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/class.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/greenbar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/group.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/method.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/package.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/redbar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/report.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/report.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/session.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/sort.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/sort.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/source.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-resources/up.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco-sessions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco.exec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-results/coverage/jacoco/jacoco.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/application-dev.yml" afterPath="$PROJECT_DIR$/src/main/resources/config/application-dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/application-dev.yml" afterPath="$PROJECT_DIR$/target/classes/config/application-dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/com/company/Authentication.java" afterPath="$PROJECT_DIR$/../src/com/company/Authentication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/com/company/base32.java" afterPath="$PROJECT_DIR$/../src/com/company/base32.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
     </list>
     <ignored path="requireris.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,83 +448,14 @@
     <favorites_list name="requireris" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="googlePlusWidgetDirective.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetDirective.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="googlePlusWidgetController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="46" column="86" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
-              <folding>
-                <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="googleWidgetController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#45#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="76" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoogleOTPGenerator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -136,7 +475,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidget.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetDirective.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/components/login/login.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/layouts/navbar/navbar.html" />
         <option value="$PROJECT_DIR$/gulp/config.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" />
@@ -149,18 +487,34 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidget.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/config/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetDirective.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleFlow.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js" />
         <option value="$PROJECT_DIR$/src/main/resources/config/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/CorsFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/RequirerisCorsFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleFlow.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidget.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidget.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidget.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidget.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidget.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidgetDirective.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidgetDirective.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidgetDirective.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidgetDirective.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidgetDirective.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidgetController.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidgetController.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidgetController.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidgetController.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidgetController.js" />
       </list>
     </option>
   </component>
@@ -197,7 +551,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -215,8 +569,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,6 +649,240 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVCSpringAngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVCSpringAngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snapchatWidget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVCSpringAngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ovhWidget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVCSpringAngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="googleWidget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVCSpringAngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="githubWidget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVCSpringAngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="facebookWidget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVCSpringAngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dropboxWidget" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -455,18 +1044,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Hickup/hickup_portal_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/content/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget" />
@@ -926,6 +1517,9 @@
       <workItem from="1478527920070" duration="14695000" />
       <workItem from="1478548792138" duration="39469000" />
       <workItem from="1478684168076" duration="19641000" />
+      <workItem from="1478781082592" duration="717000" />
+      <workItem from="1478781971674" duration="71000" />
+      <workItem from="1478809044722" duration="1587000" />
     </task>
     <task id="LOCAL-00001" summary="Changed css, server port and removed authentication process.">
       <created>1478521680544</created>
@@ -966,41 +1560,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96036000" />
+    <option name="totallyTimeSpent" value="98411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19635417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19595315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24965987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1020,7 +1614,8 @@
     <MESSAGE value="Started app auth" />
     <MESSAGE value="Pushed missing files" />
     <MESSAGE value="Started Google sign in implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started Google sign in implementation" />
+    <MESSAGE value="Add of Facebook, OVH, Snapchat, Github, Dropbox modules. Still have to test for each account.&#10;+ Bug encountered : &quot;Key is invalid&quot; then key generated is displayed instant when entering a short and invalid secret key." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add of Facebook, OVH, Snapchat, Github, Dropbox modules. Still have to test for each account.&#10;+ Bug encountered : &quot;Key is invalid&quot; then key generated is displayed instant when entering a short and invalid secret key." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1033,119 +1628,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/2.4.0/elasticsearch-2.4.0.jar!/org/elasticsearch/node/NodeBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="77" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/layouts/navbar/navbar.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/layouts/navbar/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/components/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1210,27 +1692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/ApplicationWebXml.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1243,7 +1704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,7 +1711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,19 +1718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1674">
           <caret line="115" column="46" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2156#2157#0" expanded="false" />
-            <element signature="e#2206#2207#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="23" column="97" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,37 +1728,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="127" />
-          <folding>
-            <element signature="n#style#0;n#submit#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#submit#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#1;n#submit#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6930">
-          <caret line="385" column="8" selection-start-line="385" selection-start-column="8" selection-end-line="385" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetDirective.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="180">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
@@ -1331,7 +1749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-145">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,7 +1756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,7 +1763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,7 +1770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1363,7 +1777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1371,36 +1784,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/RequirerisCorsFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/RequirerisCorsFilter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Authentication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -1409,23 +1796,249 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="46" column="86" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
+        <state relative-caret-position="795">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
+            <marker date="1478781171000" expanded="true" signature="1549:1556" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleOTPGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+        <state relative-caret-position="105">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="414" column="21" selection-start-line="414" selection-start-column="21" selection-end-line="414" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/requireris/app/web/rest/GoogleFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#google-widget#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#github-widget#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#snapchat-widget#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#facebook-widget#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#dropbox-widget#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ovh-widget#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="164" column="2" selection-start-line="164" selection-start-column="2" selection-end-line="164" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/googleWidgetDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="56" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidgetDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidgetDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidgetDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidgetDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidgetDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/dropboxWidget/dropboxWidgetController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/facebookWidget/facebookWidgetController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/githubWidget/githubWidgetController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/ovhWidget/ovhWidgetController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/snapchatWidget/snapchatWidgetController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googleWidget/googleWidgetDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
