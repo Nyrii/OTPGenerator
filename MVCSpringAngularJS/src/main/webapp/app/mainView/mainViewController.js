@@ -4,27 +4,20 @@
 
 'use strict';
 angular.module('requirerisApp')
-    .controller('mainViewController', ["$cookies", "$scope", "LoginService", "Auth",
-        function ($cookies, $scope, $loginService, $auth) {
+    .controller('mainViewController', function () {
 
-        $(document).ready(function() {
-            var active_tab_selector = $('.nav > li.active > a').attr('href');
-            var dict = ["#Google", "#Github"];
+        var dict = ["#Google", "#Github", "#Snapchat", "#Facebook", "#Dropbox", "#OVH"];
 
-            $.each(dict, function(key, value) {
-                if (value == active_tab_selector) {
-                    $('#module').html(value.substr(1));
-                    $(active_tab_selector).css('display', '');
-                    return true;
-                }
-            });
+        $(document).ready(function () {
+            $('#module').html("Google");
+            $('#Google').css('display', '');
         });
 
         $('.nav > li > a').click(function (event) {
             event.preventDefault(); // Stop browser to take action for clicked anchor
 
             // Get displaying tab content jQuery selector
-            var active_tab_selector = $('.nav > li.active > a').attr('href');
+            var old_id = $('.nav > li.active > a').attr('href');
 
             // Find actived navigation and remove 'active' css
             var actived_nav = $('.nav > li.active');
@@ -33,18 +26,18 @@ angular.module('requirerisApp')
             // Add 'active' css into clicked navigation
             $(this).parents('li').addClass('active');
 
-            // Hide displaying tab content
-            $(active_tab_selector).css('display', 'none');
-
             // Show target tab content
-            var target_tab_selector = $(this).attr('href');
-            $(target_tab_selector).css('display', '');
+            var new_id = $(this).attr('href');
 
-            var dict = ["#Google", "#Github", "#Snapchat", "#Facebook", "#Dropbox", "#OVH"];
-
-            $.each(dict, function(key, value) {
-                if (value == target_tab_selector) {
+            $.each(dict, function (key, value) {
+                if (value == new_id) {
+                    // "Generate a new [value.substr(1)] password" : Google, Facebook...
                     $('#module').html(value.substr(1));
+                    // Change id depending of the active li
+                    $(old_id).attr('id', value.substr(1));
+                    // Change module of the otpModule
+                    console.log(value.substr(1));
+                    $(new_id).attr('module', value.substr(1).toLowerCase());
                     return true;
                 }
             });
@@ -52,6 +45,4 @@ angular.module('requirerisApp')
             $("#secretID").val('');
         });
 
-    }
-
-]);
+    });

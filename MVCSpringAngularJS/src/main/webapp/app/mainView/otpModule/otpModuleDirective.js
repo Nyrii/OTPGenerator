@@ -5,12 +5,12 @@
 'use strict';
 angular.module('requirerisApp')
 
-    .directive('facebookWidget', function() {
+    .directive('otpModule', function() {
 
         return {
             restrict: 'AE',
-            templateUrl: "app/mainView/facebookWidget/facebookWidget.html",
-            controller: "facebookWidgetController",
+            templateUrl: "app/mainView/otpModule/otpModule.html",
+            controller: "otpModuleController",
             scope: {
                 state: "@",
                 'module' : '@',

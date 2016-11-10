@@ -4,7 +4,7 @@
 
 'use strict';
 angular.module('requirerisApp')
-    .controller('facebookWidgetController', ["$scope", function ($scope) {
+    .controller('otpModuleController', ["$scope", function ($scope) {
 
         $("submit").click(function () {
             var form = $("#form").serializeArray();
