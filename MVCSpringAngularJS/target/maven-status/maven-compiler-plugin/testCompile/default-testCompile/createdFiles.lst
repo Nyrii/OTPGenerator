@@ -1,7 +1,0 @@
-com/requireris/app/config/elasticsearch/IndexReinitializer.class
-com/requireris/app/web/rest/AuditResourceIntTest.class
-com/requireris/app/service/UserServiceIntTest.class
-com/requireris/app/web/rest/AccountResourceIntTest.class
-com/requireris/app/web/rest/TestUtil.class
-com/requireris/app/security/SecurityUtilsUnitTest.class
-com/requireris/app/web/rest/UserResourceIntTest.class
