@@ -4,13 +4,13 @@
 
 'use strict';
 angular.module('requirerisApp')
-    .controller('mainViewController', function () {
+    .controller('mainViewController', ["$scope", function ($scope) {
 
         var dict = ["#Google", "#Github", "#Snapchat", "#Facebook", "#Dropbox", "#OVH"];
 
         $(document).ready(function () {
-            $('#module').html("Google");
-            $('#Google').css('display', '');
+            $scope.moduleName = "Google";
+            $scope.module = {value: "google"};
         });
 
         $('.nav > li > a').click(function (event) {
@@ -32,11 +32,13 @@ angular.module('requirerisApp')
             $.each(dict, function (key, value) {
                 if (value == new_id) {
                     // "Generate a new [value.substr(1)] password" : Google, Facebook...
-                    $('#module').html(value.substr(1));
+                    $scope.$apply(function () {
+                        $scope.moduleName = value.substr(1);
+                    });
                     // Change id depending of the active li
                     $(old_id).attr('id', value.substr(1));
                     // Change module of the otpModule
-                    $(new_id).attr('module', value.substr(1).toLowerCase());
+                    // $(new_id).attr('module', value.substr(1).toLowerCase());
                     return true;
                 }
             });
@@ -44,4 +46,8 @@ angular.module('requirerisApp')
             $("#secretID").val('');
         });
 
-    });
+        $scope.changeModule = function(new_module) {
+            $scope.module.value = new_module;
+        }
+
+    }]);

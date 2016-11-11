@@ -6,7 +6,15 @@
 angular.module('requirerisApp')
 		.controller('googlePlusWidgetController', ["$scope", "$cookies", function ($scope, $cookies) {
 
-			$("#signInGoogle").click(function () {
+			$(document).ready(function() {
+				if ($cookies.get('Requireris')) {
+					$scope.signedIn = true;
+				} else {
+					$scope.signedIn = false;
+				}
+			});
+
+			$scope.signInGoogle = function () {
 				$.ajax({
 					url: "/api/getAuthorize" + "?_csrf=" + getCSRF(),
 					type: "GET",
@@ -32,7 +40,12 @@ angular.module('requirerisApp')
 						console.log(data);
 					}
 				});
-			});
+			};
+
+			$scope.signOutGoogle = function () {
+				$scope.signedIn = false;
+				$cookies.remove('Requireris');
+			};
 
 			function getData(key) {
 				$.ajax({
@@ -53,6 +66,10 @@ angular.module('requirerisApp')
 						exp = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate());
 						$cookies.put('Requireris', data.id, {
 							expires: exp
+						});
+
+						$scope.$apply(function() {
+							$scope.signedIn = true;
 						});
 					},
 					error: function (data) {

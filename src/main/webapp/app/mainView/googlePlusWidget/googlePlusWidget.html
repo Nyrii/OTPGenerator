@@ -1,6 +1,10 @@
 <div class="row">
-    <a class="btn btn-block btn-social btn-google" style="width: 30%; margin-left: auto; margin-right: auto;" id="signInGoogle">
+    <a class="btn btn-block btn-social btn-google"
+        style="width: 35%;margin-left: auto;margin-right: auto;text-align:center;"
+        id="{{signedIn == false ? 'signInGoogle' : 'signOutGoogle'}}"
+        ng-click="signedIn == false ? signInGoogle() : signOutGoogle()">
         <span class="fa fa-google"></span>
-        Sign in with Google
+        <span ng-hide="signedIn">Sign in with Google</span>
+        <span ng-show="signedIn">Sign out from Requireris</span>
     </a>
 </div>

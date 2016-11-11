@@ -6,7 +6,7 @@
 angular.module('requirerisApp')
     .controller('otpModuleController', ["$scope", function ($scope) {
 
-        $("submit").click(function () {
+        $scope.sendData = function () {
             var form = $("#form").serializeArray();
             $("#secretID").val('');
 
@@ -28,7 +28,7 @@ angular.module('requirerisApp')
             } else {
                 $('#otp').html("Your secret key is invalid.");
             }
-        });
+        };
 
         function getCSRF() {
             var name = 'CSRF-TOKEN=';
@@ -40,6 +40,7 @@ angular.module('requirerisApp')
             }
             return '';
         }
+
     }
 
     ]);

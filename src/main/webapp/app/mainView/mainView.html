@@ -10,12 +10,12 @@
                     <div class="row">
                         <nav>
                           <ul class="nav masthead-nav">
-                              <li class="active"><a href="#Google">Google</a></li>
-                              <li><a href="#Github">GitHub</a></li>
-                              <li><a href="#Snapchat">Snapchat</a></li>
-                              <li><a href="#Facebook">Facebook</a></li>
-                              <li><a href="#Dropbox">Dropbox</a></li>
-                              <li><a href="#OVH">OVH</a></li>
+                              <li class="active" ng-click="changeModule('google')"><a href="#Google">Google</a></li>
+                              <li ng-click="changeModule('github')"><a href="#Github">GitHub</a></li>
+                              <li ng-click="changeModule('snapchat')"><a href="#Snapchat">Snapchat</a></li>
+                              <li ng-click="changeModule('facebook')"><a href="#Facebook">Facebook</a></li>
+                              <li ng-click="changeModule('dropbox')"><a href="#Dropbox">Dropbox</a></li>
+                              <li ng-click="changeModule('ovh')"><a href="#OVH">OVH</a></li>
                           </ul>
                         </nav>
                     </div>
@@ -23,13 +23,13 @@
             </div>
             <div class="inner cover">
               <google-plus-widget id="GooglePlus"></google-plus-widget>
-              <h1 class="cover-heading">Generate a new <span id="module"></span> password</h1>
+              <h1 class="cover-heading">Generate a new {{moduleName}} password</h1>
               <p class="lead">Just click the button to get a new one-time password. Once the latter is generated and used, you will not be able to use it again.</p>
                 <form id="form">
                     <p>
                         <label for="secretID">Update key : </label> <input type="text" id="secretID" name="secret" style="color:black;" />
                     </p>
-                    <otp-module id="Google" style="display:none;" module="google"></otp-module>
+                    <otp-module id="Google" module="module.value"></otp-module>
                 </form>
               </p>
               <h2 id="otp">
