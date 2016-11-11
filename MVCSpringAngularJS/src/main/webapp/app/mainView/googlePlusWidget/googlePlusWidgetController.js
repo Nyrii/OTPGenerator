@@ -6,7 +6,7 @@
 angular.module('requirerisApp')
 		.controller('googlePlusWidgetController', ["$scope", "$cookies", function ($scope, $cookies) {
 
-			$("a").click(function () {
+			$("#signInGoogle").click(function () {
 				$.ajax({
 					url: "/api/getAuthorize" + "?_csrf=" + getCSRF(),
 					type: "GET",

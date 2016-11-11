@@ -36,7 +36,6 @@ angular.module('requirerisApp')
                     // Change id depending of the active li
                     $(old_id).attr('id', value.substr(1));
                     // Change module of the otpModule
-                    console.log(value.substr(1));
                     $(new_id).attr('module', value.substr(1).toLowerCase());
                     return true;
                 }
