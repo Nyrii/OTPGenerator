@@ -16,6 +16,10 @@ angular.module('requirerisApp')
             } else {
                 $scope.authenticated = false;
             }
+            var name = $cookies.get('RequirerisName');
+			if (name) {
+				$('#name').html("Bonjour " + name);
+			}
         });
 
 		$scope.getCSRF = function() {

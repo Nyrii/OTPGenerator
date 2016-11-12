@@ -22,7 +22,7 @@ angular.module('requirerisApp')
 					xhrFields: {
 						withCredentials: true
 					},
-					success: function (data, status, header) {
+					success: function (data, status) {
 						var w = 400;
 						var h = 500;
 						var left = (screen.width / 2) - (w / 2);
@@ -43,8 +43,10 @@ angular.module('requirerisApp')
 			};
 
 			$scope.signOutGoogle = function () {
+				$('#otp').html("");
 				$scope.authenticated = false;
 				$cookies.remove('Requireris');
+				$cookies.remove('RequirerisName');
 			};
 
 			function getData(key) {
@@ -56,7 +58,6 @@ angular.module('requirerisApp')
 					},
 					dataType: "json",
 					success: function (data) {
-						//TODO : data = error -> pas co. sinon co. (Y'a le nom dedans)
 						if (data.error) {
 							return;
 							console.log(data.error);
@@ -67,8 +68,12 @@ angular.module('requirerisApp')
 						$cookies.put('Requireris', data.id, {
 							expires: exp
 						});
+						$cookies.put('RequirerisName', data.name, {
+							expires: exp
+						});
 
 						$scope.$apply(function() {
+							$('#otp').html("Bonjour " + data.name);
 							$scope.authenticated = true;
 						});
 					},

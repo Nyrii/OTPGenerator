@@ -22,6 +22,7 @@
                 </div>
             </div>
             <div class="inner cover">
+				<h2 ng-show="signedIn" id="name"></h2>
                 <google-plus-widget id="GooglePlus" authenticated="signedIn" csrf="getCSRF()"></google-plus-widget>
                 <h1 class="cover-heading">Generate a new {{moduleName}} password</h1>
                 <p class="lead" ng-hide="signedIn">Click the generate button to get a new one-time password. Once the latter is generated and used, you will not be able to use it again.</p>
