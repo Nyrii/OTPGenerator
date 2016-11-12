@@ -1,1 +1,0 @@
-java -jar ..\target\requireris-0.0.1-SNAPSHOT.war
