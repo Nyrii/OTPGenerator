@@ -42,8 +42,8 @@ angular.module('requirerisApp')
                     });
                     // Change id depending of the active li
                     $(old_id).attr('id', value.substr(1));
-                    // Change module of the otpModule
-                    // $(new_id).attr('module', value.substr(1).toLowerCase());
+                    // Clean the value of otp
+                    $('#otp').html('');
                     return true;
                 }
             });
