@@ -12,7 +12,8 @@ angular.module('requirerisApp')
             scope: {
                 state: "@",
                 authenticated: "=",
-                module: "="
+                module: "=",
+                csrf: '&'
             }
         }
     });

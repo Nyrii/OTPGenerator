@@ -13,7 +13,8 @@ angular.module('requirerisApp')
             controller: "otpModuleController",
             scope: {
                 state: "@",
-                'module' : '='
+                'module': '=',
+                'csrf': '&'
             }
         }
     });

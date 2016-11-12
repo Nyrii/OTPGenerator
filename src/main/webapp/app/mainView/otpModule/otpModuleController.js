@@ -11,7 +11,7 @@ angular.module('requirerisApp')
             $("#secretID").val('');
 
             $.ajax({
-                url: "/api/generate/" + $scope.module + "?_csrf=" + $scope.getCSRF(),
+                url: "/api/generate/" + $scope.module + "?_csrf=" + $scope.csrf(),
                 type: "POST",
                 data: {
                     key: form[0].value

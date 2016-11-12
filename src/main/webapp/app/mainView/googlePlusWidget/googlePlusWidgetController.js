@@ -16,7 +16,7 @@ angular.module('requirerisApp')
 
 			$scope.signInGoogle = function () {
 				$.ajax({
-					url: "/api/getAuthorize" + "?_csrf=" + $scope.getCSRF(),
+					url: "/api/getAuthorize" + "?_csrf=" + $scope.csrf(),
 					type: "GET",
 					dataType: "json",
 					xhrFields: {
@@ -49,7 +49,7 @@ angular.module('requirerisApp')
 
 			function getData(key) {
 				$.ajax({
-					url: "/api/getAuthorizeData" + "?_csrf=" + $scope.getCSRF(),
+					url: "/api/getAuthorizeData" + "?_csrf=" + $scope.csrf(),
 					type: "POST",
 					data: {
 						key: key

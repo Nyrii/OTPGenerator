@@ -13,7 +13,8 @@ angular.module('requirerisApp')
 				controller: "googlePlusWidgetController",
 				scope: {
 					state: "@",
-					authenticated: "="
+					authenticated: "=",
+					csrf: '&'
 				}
 
 			}
