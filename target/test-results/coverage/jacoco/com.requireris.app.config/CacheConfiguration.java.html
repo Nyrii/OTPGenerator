@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CacheConfiguration.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Requireris</a> &gt; <a href="index.source.html" class="el_package">com.requireris.app.config</a> &gt; <span class="el_source">CacheConfiguration.java</span></div><h1>CacheConfiguration.java</h1><pre class="source lang-java linenums">package com.requireris.app.config;
+
+import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.ehcache.InstrumentedEhcache;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.*;
+import org.springframework.cache.ehcache.EhCacheCacheManager;
+import org.springframework.util.Assert;
+
+import javax.annotation.PreDestroy;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.metamodel.EntityType;
+import javax.persistence.metamodel.PluralAttribute;
+import java.util.Set;
+import java.util.SortedSet;
+
+@SuppressWarnings(&quot;unused&quot;)
+@Configuration
+@EnableCaching
+@AutoConfigureAfter(value = { MetricsConfiguration.class, DatabaseConfiguration.class })
+<span class="fc" id="L27">public class CacheConfiguration {</span>
+
+<span class="fc" id="L29">    private final Logger log = LoggerFactory.getLogger(CacheConfiguration.class);</span>
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    @Inject
+    private MetricRegistry metricRegistry;
+
+    private net.sf.ehcache.CacheManager cacheManager;
+
+    @PreDestroy
+    public void destroy() {
+<span class="fc" id="L41">        log.info(&quot;Remove Cache Manager metrics&quot;);</span>
+<span class="fc" id="L42">        SortedSet&lt;String&gt; names = metricRegistry.getNames();</span>
+<span class="fc" id="L43">        names.forEach(metricRegistry::remove);</span>
+<span class="fc" id="L44">        log.info(&quot;Closing Cache Manager&quot;);</span>
+<span class="nc" id="L45">        cacheManager.shutdown();</span>
+<span class="nc" id="L46">    }</span>
+
+    @Bean
+    public CacheManager cacheManager(JHipsterProperties jHipsterProperties) {
+<span class="fc" id="L50">        log.debug(&quot;Starting Ehcache&quot;);</span>
+<span class="fc" id="L51">        cacheManager = net.sf.ehcache.CacheManager.create();</span>
+<span class="fc" id="L52">        cacheManager.getConfiguration().setMaxBytesLocalHeap(jHipsterProperties.getCache().getEhcache().getMaxBytesLocalHeap());</span>
+<span class="fc" id="L53">        log.debug(&quot;Registering Ehcache Metrics gauges&quot;);</span>
+<span class="fc" id="L54">        Set&lt;EntityType&lt;?&gt;&gt; entities = entityManager.getMetamodel().getEntities();</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        for (EntityType&lt;?&gt; entity : entities) {</span>
+<span class="fc" id="L56">            String name = entity.getName();</span>
+<span class="pc bpc" id="L57" title="2 of 4 branches missed.">            if (name == null || entity.getJavaType() != null) {</span>
+<span class="fc" id="L58">                name = entity.getJavaType().getName();</span>
+            }
+<span class="fc" id="L60">            Assert.notNull(name, &quot;entity cannot exist without an identifier&quot;);</span>
+<span class="fc" id="L61">            reconfigureCache(name, jHipsterProperties);</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">            for (PluralAttribute pluralAttribute : entity.getPluralAttributes()) {</span>
+<span class="fc" id="L63">                reconfigureCache(name + &quot;.&quot; + pluralAttribute.getName(), jHipsterProperties);</span>
+<span class="fc" id="L64">            }</span>
+<span class="fc" id="L65">        }</span>
+<span class="fc" id="L66">        EhCacheCacheManager ehCacheManager = new EhCacheCacheManager();</span>
+<span class="fc" id="L67">        ehCacheManager.setCacheManager(cacheManager);</span>
+<span class="fc" id="L68">        return ehCacheManager;</span>
+    }
+
+    private void reconfigureCache(String name, JHipsterProperties jHipsterProperties) {
+<span class="fc" id="L72">        net.sf.ehcache.Cache cache = cacheManager.getCache(name);</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (cache != null) {</span>
+<span class="fc" id="L74">            cache.getCacheConfiguration().setTimeToLiveSeconds(jHipsterProperties.getCache().getTimeToLiveSeconds());</span>
+<span class="fc" id="L75">            net.sf.ehcache.Ehcache decoratedCache = InstrumentedEhcache.instrument(metricRegistry, cache);</span>
+<span class="fc" id="L76">            cacheManager.replaceCacheWithDecoratedCache(cache, decoratedCache);</span>
+        }
+<span class="fc" id="L78">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

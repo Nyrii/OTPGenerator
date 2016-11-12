@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SecurityConfiguration.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Requireris</a> &gt; <a href="index.source.html" class="el_package">com.requireris.app.config</a> &gt; <span class="el_source">SecurityConfiguration.java</span></div><h1>SecurityConfiguration.java</h1><pre class="source lang-java linenums">package com.requireris.app.config;
+
+import com.requireris.app.security.*;
+import com.requireris.app.web.filter.CsrfCookieGeneratorFilter;
+import com.requireris.app.config.JHipsterProperties;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.data.repository.query.SecurityEvaluationContextExtension;
+import org.springframework.security.web.authentication.RememberMeServices;
+import org.springframework.security.web.csrf.CsrfFilter;
+
+import javax.inject.Inject;
+
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
+<span class="fc" id="L28">public class SecurityConfiguration extends WebSecurityConfigurerAdapter {</span>
+
+    @Inject
+    private JHipsterProperties jHipsterProperties;
+
+    @Inject
+    private AjaxAuthenticationSuccessHandler ajaxAuthenticationSuccessHandler;
+
+    @Inject
+    private AjaxAuthenticationFailureHandler ajaxAuthenticationFailureHandler;
+
+    @Inject
+    private AjaxLogoutSuccessHandler ajaxLogoutSuccessHandler;
+
+    @Inject
+    private Http401UnauthorizedEntryPoint authenticationEntryPoint;
+
+    @Inject
+    private UserDetailsService userDetailsService;
+
+    @Inject
+    private RememberMeServices rememberMeServices;
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+<span class="fc" id="L53">        return new BCryptPasswordEncoder();</span>
+    }
+
+    @Inject
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+<span class="fc" id="L58">        auth</span>
+<span class="fc" id="L59">            .userDetailsService(userDetailsService)</span>
+<span class="fc" id="L60">                .passwordEncoder(passwordEncoder());</span>
+<span class="fc" id="L61">    }</span>
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+<span class="fc" id="L65">        web.ignoring()</span>
+<span class="fc" id="L66">            .antMatchers(HttpMethod.OPTIONS, &quot;/**&quot;)</span>
+<span class="fc" id="L67">            .antMatchers(&quot;/app/**/*.{js,html}&quot;)</span>
+<span class="fc" id="L68">            .antMatchers(&quot;/bower_components/**&quot;)</span>
+<span class="fc" id="L69">            .antMatchers(&quot;/i18n/**&quot;)</span>
+<span class="fc" id="L70">            .antMatchers(&quot;/content/**&quot;)</span>
+<span class="fc" id="L71">            .antMatchers(&quot;/swagger-ui/index.html&quot;)</span>
+<span class="fc" id="L72">            .antMatchers(&quot;/test/**&quot;)</span>
+<span class="fc" id="L73">            .antMatchers(&quot;/h2-console/**&quot;);</span>
+<span class="fc" id="L74">    }</span>
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+<span class="fc" id="L78">        http</span>
+<span class="fc" id="L79">            .csrf()</span>
+<span class="fc" id="L80">        .and()</span>
+<span class="fc" id="L81">            .addFilterAfter(new CsrfCookieGeneratorFilter(), CsrfFilter.class)</span>
+<span class="fc" id="L82">            .exceptionHandling()</span>
+<span class="fc" id="L83">            .accessDeniedHandler(new CustomAccessDeniedHandler())</span>
+<span class="fc" id="L84">            .authenticationEntryPoint(authenticationEntryPoint)</span>
+<span class="fc" id="L85">        .and()</span>
+<span class="fc" id="L86">            .rememberMe()</span>
+<span class="fc" id="L87">            .rememberMeServices(rememberMeServices)</span>
+<span class="fc" id="L88">            .rememberMeParameter(&quot;remember-me&quot;)</span>
+<span class="fc" id="L89">            .key(jHipsterProperties.getSecurity().getRememberMe().getKey())</span>
+<span class="fc" id="L90">        .and()</span>
+<span class="fc" id="L91">            .formLogin()</span>
+<span class="fc" id="L92">            .loginProcessingUrl(&quot;/api/authentication&quot;)</span>
+<span class="fc" id="L93">            .successHandler(ajaxAuthenticationSuccessHandler)</span>
+<span class="fc" id="L94">            .failureHandler(ajaxAuthenticationFailureHandler)</span>
+<span class="fc" id="L95">            .usernameParameter(&quot;j_username&quot;)</span>
+<span class="fc" id="L96">            .passwordParameter(&quot;j_password&quot;)</span>
+<span class="fc" id="L97">            .permitAll()</span>
+<span class="fc" id="L98">        .and()</span>
+<span class="fc" id="L99">            .logout()</span>
+<span class="fc" id="L100">            .logoutUrl(&quot;/api/logout&quot;)</span>
+<span class="fc" id="L101">            .logoutSuccessHandler(ajaxLogoutSuccessHandler)</span>
+<span class="fc" id="L102">            .deleteCookies(&quot;JSESSIONID&quot;, &quot;CSRF-TOKEN&quot;)</span>
+<span class="fc" id="L103">            .permitAll()</span>
+<span class="fc" id="L104">        .and()</span>
+<span class="fc" id="L105">            .headers()</span>
+<span class="fc" id="L106">            .frameOptions()</span>
+<span class="fc" id="L107">            .disable()</span>
+<span class="fc" id="L108">        .and()</span>
+<span class="fc" id="L109">            .authorizeRequests()</span>
+<span class="fc" id="L110">            .antMatchers(&quot;/api/register&quot;).permitAll()</span>
+<span class="fc" id="L111">            .antMatchers(&quot;/api/activate&quot;).permitAll()</span>
+<span class="fc" id="L112">            .antMatchers(&quot;/api/authenticate&quot;).permitAll()</span>
+<span class="fc" id="L113">            .antMatchers(&quot;/api/account/reset_password/init&quot;).permitAll()</span>
+<span class="fc" id="L114">            .antMatchers(&quot;/api/account/reset_password/finish&quot;).permitAll()</span>
+<span class="fc" id="L115">            .antMatchers(&quot;/api/profile-info&quot;).permitAll()</span>
+//            .antMatchers(&quot;/api/**&quot;).authenticated()
+<span class="fc" id="L117">            .antMatchers(&quot;/management/**&quot;).hasAuthority(AuthoritiesConstants.ADMIN)</span>
+<span class="fc" id="L118">            .antMatchers(&quot;/v2/api-docs/**&quot;).permitAll()</span>
+<span class="fc" id="L119">            .antMatchers(&quot;/swagger-resources/configuration/ui&quot;).permitAll()</span>
+<span class="fc" id="L120">            .antMatchers(&quot;/swagger-ui/index.html&quot;).hasAuthority(AuthoritiesConstants.ADMIN);</span>
+
+<span class="fc" id="L122">    }</span>
+
+    @Bean
+    public SecurityEvaluationContextExtension securityEvaluationContextExtension() {
+<span class="fc" id="L126">        return new SecurityEvaluationContextExtension();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
