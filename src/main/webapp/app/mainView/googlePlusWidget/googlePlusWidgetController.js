@@ -8,9 +8,9 @@ angular.module('requirerisApp')
 
 			$(document).ready(function() {
 				if ($cookies.get('Requireris')) {
-					$scope.signedIn = true;
+					$scope.authenticated = true;
 				} else {
-					$scope.signedIn = false;
+					$scope.authenticated = false;
 				}
 			});
 
@@ -43,7 +43,7 @@ angular.module('requirerisApp')
 			};
 
 			$scope.signOutGoogle = function () {
-				$scope.signedIn = false;
+				$scope.authenticated = false;
 				$cookies.remove('Requireris');
 			};
 
@@ -69,7 +69,7 @@ angular.module('requirerisApp')
 						});
 
 						$scope.$apply(function() {
-							$scope.signedIn = true;
+							$scope.authenticated = true;
 						});
 					},
 					error: function (data) {

@@ -4,13 +4,18 @@
 
 'use strict';
 angular.module('requirerisApp')
-    .controller('mainViewController', ["$scope", function ($scope) {
+    .controller('mainViewController', ["$scope", "$cookies", function ($scope, $cookies) {
 
         var dict = ["#Google", "#Github", "#Snapchat", "#Facebook", "#Dropbox", "#OVH"];
 
         $(document).ready(function () {
             $scope.moduleName = "Google";
             $scope.module = {value: "google"};
+            if ($cookies.get('Requireris')) {
+                $scope.authenticated = true;
+            } else {
+                $scope.authenticated = false;
+            }
         });
 
         $('.nav > li > a').click(function (event) {
