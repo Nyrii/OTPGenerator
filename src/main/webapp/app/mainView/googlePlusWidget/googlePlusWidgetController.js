@@ -44,6 +44,7 @@ angular.module('requirerisApp')
 
 			$scope.signOutGoogle = function () {
 				$('#otp').html("");
+				$('#name').html("");
 				$scope.authenticated = false;
 				$cookies.remove('Requireris');
 				$cookies.remove('RequirerisName');
@@ -73,7 +74,7 @@ angular.module('requirerisApp')
 						});
 
 						$scope.$apply(function() {
-							$('#otp').html("Bonjour " + data.name);
+							$('#name').html("Bonjour " + data.name);
 							$scope.authenticated = true;
 						});
 					},

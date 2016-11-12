@@ -774,16 +774,6 @@
                         </configuration>
                     </plugin>
                 </plugins>
-
-				<resources>
-					<resource>
-						<directory>/</directory>
-						<includes>
-							<include>google-services.json</include>
-						</includes>
-					</resource>
-				</resources>
-
 			</build>
             <properties>
                 <!-- log configuration -->
