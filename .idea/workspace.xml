@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e420dfc3-2b3c-4bb1-baa9-1609396b7381" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKey.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/0/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/1/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/2/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/3/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" afterPath="$PROJECT_DIR$/target/elasticsearch/data/elasticsearch/nodes/0/indices/user/4/translog/translog.ckp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/h2db/db/requireris.mv.db" afterPath="$PROJECT_DIR$/target/h2db/db/requireris.mv.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidget.html" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidget.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetDirective.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/otpModule/otpModule.html" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/otpModule/otpModule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" afterPath="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKey.html" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKey.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyDirective.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyDirective.js" />
     </list>
     <ignored path="requireris.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,30 +28,7 @@
     <favorites_list name="requireris" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="mainView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#p#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainView.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/content/css/mainView.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,17 +54,17 @@
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/otpModule/otpModuleDirective.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/bower_components/bootstrap-social/bootstrap-social.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/otpModule/otpModuleController.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/otpModule/otpModule.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetDirective.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidget.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidgetController.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyDirective.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyController.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKey.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/css/mainView.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/otpModule/otpModule.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidget.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyDirective.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKey.html" />
       </list>
     </option>
   </component>
@@ -448,6 +413,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="otpModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requireris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OTPGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="googlePlusWidget" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1009,7 +1008,7 @@
       <updated>1478875653312</updated>
       <workItem from="1478875656785" duration="252000" />
       <workItem from="1478876071846" duration="12081000" />
-      <workItem from="1478954646963" duration="4575000" />
+      <workItem from="1478954646963" duration="6835000" />
     </task>
     <task id="LOCAL-00001" summary="- Modules switch buttons implemented.&#10;- Bug of the module name not updated fixed.">
       <created>1478897898364</created>
@@ -1018,11 +1017,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478897898364</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- updateKey module added (so the keys are pushed securely into the database) + added functionalities to update the page if the user is authenticated with google">
+      <created>1478961467993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478961467993</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16908000" />
+    <option name="totallyTimeSpent" value="19168000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1035,7 +1041,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1052,7 +1058,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24334398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24334398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1114,7 +1120,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Modules switch buttons implemented.&#10;- Bug of the module name not updated fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Modules switch buttons implemented.&#10;- Bug of the module name not updated fixed." />
+    <MESSAGE value="- updateKey module added (so the keys are pushed securely into the database) + added functionalities to update the page if the user is authenticated with google" />
+    <option name="LAST_COMMIT_MESSAGE" value="- updateKey module added (so the keys are pushed securely into the database) + added functionalities to update the page if the user is authenticated with google" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1194,30 +1201,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="181" column="58" selection-start-line="181" selection-start-column="58" selection-end-line="181" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/css/mainView.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1232,56 +1235,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKeyDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/otpModule/otpModule.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="405">
+          <caret line="27" column="108" selection-start-line="27" selection-start-column="108" selection-end-line="27" selection-end-column="108" />
           <folding>
             <element signature="n#style#0;n#button#0;n#submit#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#submit#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#2;n#submit#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#2;n#submit#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#button#2;n#submit#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#3;n#submit#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#4;n#submit#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#5;n#submit#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/updateKey/updateKey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#button#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/googlePlusWidget/googlePlusWidget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainViewController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/app/mainView/mainView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="300">
+          <caret line="38" column="81" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#input#0;n#p#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/css/mainView.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>

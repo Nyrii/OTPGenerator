@@ -24,7 +24,7 @@
             <div class="inner cover">
                 <google-plus-widget id="GooglePlus" authenticated="signedIn"></google-plus-widget>
                 <h1 class="cover-heading">Generate a new {{moduleName}} password</h1>
-                <p class="lead">Click the generate button to get a new one-time password. Once the latter is generated and used, you will not be able to use it again.</p>
+                <p class="lead" ng-hide="signedIn">Click the generate button to get a new one-time password. Once the latter is generated and used, you will not be able to use it again.</p>
                 <p class="lead" ng-show="signedIn">You can now <strong>add and update keys</strong> from the modules we are providing.<br>Once these keys are stored securely into our database, you will be able to generate as much as OTP you want without filling the text field.</p>
                 <form id="form">
                     <p>
@@ -36,13 +36,11 @@
                         <input type="text" id="secretID" name="secret" style="color:black;" />
                     </p>
                     <p>
-                        <update-key authenticated="signedIn"></update-key>
+                        <update-key authenticated="signedIn" module="module.value"></update-key>
                     </p>
                     <otp-module id="Google" module="module.value"></otp-module>
                 </form>
-              </p>
-              <h2 id="otp">
-              </h2>
+                <h2 id="otp"></h2>
             </div>
             <div class="mastfoot">
               <div class="inner">

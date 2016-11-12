@@ -11,7 +11,8 @@ angular.module('requirerisApp')
             controller: "updateKeyController",
             scope: {
                 state: "@",
-                authenticated: "="
+                authenticated: "=",
+                module: "="
             }
         }
     });
