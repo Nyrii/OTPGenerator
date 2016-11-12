@@ -18,7 +18,7 @@ angular.module('requirerisApp')
             }
             var name = $cookies.get('RequirerisName');
 			if (name) {
-				$('#name').html("Bonjour " + name);
+				$('#name').html("Welcome " + name);
 			}
         });
 
