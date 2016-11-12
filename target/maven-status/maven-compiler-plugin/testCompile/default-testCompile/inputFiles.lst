@@ -1,0 +1,7 @@
+/home/wilmot_g/Epitech/Crypto/OTPGenerator/src/test/java/com/requireris/app/web/rest/TestUtil.java
+/home/wilmot_g/Epitech/Crypto/OTPGenerator/src/test/java/com/requireris/app/web/rest/AccountResourceIntTest.java
+/home/wilmot_g/Epitech/Crypto/OTPGenerator/src/test/java/com/requireris/app/config/elasticsearch/IndexReinitializer.java
+/home/wilmot_g/Epitech/Crypto/OTPGenerator/src/test/java/com/requireris/app/web/rest/UserResourceIntTest.java
+/home/wilmot_g/Epitech/Crypto/OTPGenerator/src/test/java/com/requireris/app/security/SecurityUtilsUnitTest.java
+/home/wilmot_g/Epitech/Crypto/OTPGenerator/src/test/java/com/requireris/app/web/rest/AuditResourceIntTest.java
+/home/wilmot_g/Epitech/Crypto/OTPGenerator/src/test/java/com/requireris/app/service/UserServiceIntTest.java

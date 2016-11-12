@@ -1,0 +1,38 @@
+<submit ng-click="updateKey()">
+	<button class="btn btn-block btn-social btn-google"
+			style="width: 35%;text-align:center;margin-left: auto;margin-right: auto;display: inline-block;"
+			ng-show="authenticated && module == 'google'">
+		<i class="fa fa-pencil"></i>
+		Update Google key
+	</button>
+	<button class="btn btn-block btn-social btn-github"
+			style="width: 35%;text-align:center;margin-left: auto;margin-right: auto;display: inline-block;"
+			ng-show="authenticated && module == 'github'">
+		<i class="fa fa-pencil"></i>
+		Update Github key
+	</button>
+	<button class="btn btn-block btn-social btn-snapchat"
+			style="width: 35%;text-align:center;margin-left: auto;margin-right: auto;display: inline-block;"
+			ng-show="authenticated && module == 'snapchat'">
+		<i class="fa fa-pencil" style="color:black;"></i>
+		<span style="color:black;">Update Snapchat key</span>
+	</button>
+	<button class="btn btn-block btn-social btn-facebook"
+			style="width: 35%;text-align:center;margin-left: auto;margin-right: auto;display: inline-block;"
+			ng-show="authenticated && module == 'facebook'">
+		<i class="fa fa-pencil"></i>
+		Update Facebook key
+	</button>
+	<button class="btn btn-block btn-social btn-dropbox"
+			style="width: 35%;text-align:center;margin-left: auto;margin-right: auto;display: inline-block;"
+			ng-show="authenticated && module == 'dropbox'">
+		<i class="fa fa-pencil"></i>
+		Update Dropbox Key
+	</button>
+	<button class="btn btn-block btn-social btn-ovh"
+			style="width: 35%;text-align:center;margin-left: auto;margin-right: auto;display: inline-block;"
+			ng-show="authenticated && module == 'ovh'">
+		<i class="fa fa-pencil"></i>
+		Update OVH Key
+	</button>
+</submit>
