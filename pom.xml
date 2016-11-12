@@ -408,6 +408,11 @@
             <artifactId>google-api-services-oauth2</artifactId>
             <version>v2-rev65-1.17.0-rc</version>
         </dependency>
+		<dependency>
+			<groupId>com.google.firebase</groupId>
+			<artifactId>firebase-admin</artifactId>
+			<version>4.0.1</version>
+		</dependency>
     </dependencies>
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>

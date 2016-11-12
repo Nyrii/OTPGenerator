@@ -6,7 +6,7 @@ angular.module('requirerisApp')
     .controller('updateKeyController', ['$scope', function($scope) {
 
         $scope.updateKey = function() {
-            console.log("Update ready.");
+
         }
 
     }]);
