@@ -81,20 +81,21 @@ public class GoogleOTPGenerator {
         Authentication auth = new Authentication();
 
 		if ((key == null || key.equals("")) && id != null) {
-			System.out.println("id " + id);
 			final Semaphore semaphore = new Semaphore(0);
 			final String infos[] = new String[1];
 			infos[0] = null;
 			usersRef.orderByChild("id").equalTo(id).addChildEventListener(new ChildEventListener() {
 				@Override
 				public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
-					HashMap<String, String> map = (HashMap) dataSnapshot.getValue();
-					System.out.println(map);
-//					try {
-//						infos[0] = map.get("key");
-//					} catch (Exception e) {
-//						infos[0] = null;
-//					}
+					try {
+						HashMap<String, String> map = (HashMap) dataSnapshot.getValue();
+						String key = map.get(moduleType + "Key");
+						if (key != null) {
+							infos[0] = new String(Base64.decodeBase64(key));
+						}
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 					semaphore.release();
 				}
 				@Override
@@ -242,7 +243,7 @@ public class GoogleOTPGenerator {
 		final String message[] = new String[1];
 		final Semaphore semaphore = new Semaphore(0);
 		Map<String, Object> update = new HashMap<>();
-		update.put(String.valueOf(id) + "/keys/" + moduleType, Base64.encodeBase64String(key.getBytes()));
+		update.put(String.valueOf(id) + "/" + moduleType + "Key", Base64.encodeBase64String(key.getBytes()));
 		usersRef.updateChildren(update, (databaseError, databaseReference) -> {
 			message[0] = (databaseError == null ? "Key updated." : "Error with firebase. Key not updated.");
 			semaphore.release();
