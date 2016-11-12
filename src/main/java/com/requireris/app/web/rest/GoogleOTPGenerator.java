@@ -51,7 +51,7 @@ public class GoogleOTPGenerator {
 	public GoogleOTPGenerator() {
 		try {
 			FirebaseOptions options = new FirebaseOptions.Builder()
-					.setServiceAccount(new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/google-services.json"))
+					.setServiceAccount(new FileInputStream(System.getProperty("user.dir") + "/google-services.json"))
 					.setDatabaseUrl("https://requireris-6348a.firebaseio.com")
 					.build();
 			FirebaseApp.initializeApp(options);

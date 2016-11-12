@@ -771,18 +771,20 @@
                         <artifactId>maven-war-plugin</artifactId>
                         <configuration>
                             <warSourceDirectory>src/main/webapp/</warSourceDirectory>
-							<webResources>
-								<resource>
-									<directory>src/main/resource</directory>
-									<includes>
-										<include>*.json</include>
-									</includes>
-								</resource>
-							</webResources>
                         </configuration>
                     </plugin>
                 </plugins>
-            </build>
+
+				<resources>
+					<resource>
+						<directory>/</directory>
+						<includes>
+							<include>google-services.json</include>
+						</includes>
+					</resource>
+				</resources>
+
+			</build>
             <properties>
                 <!-- log configuration -->
                 <logback.loglevel>DEBUG</logback.loglevel>
